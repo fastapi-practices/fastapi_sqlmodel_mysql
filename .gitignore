@@ -1,0 +1,6 @@
+__pycache__/
+.idea/
+.env
+venv/
+backend/app/log/
+.ruff_cache/
