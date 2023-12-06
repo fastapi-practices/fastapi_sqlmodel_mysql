@@ -9,11 +9,13 @@ from fastapi.security import OAuth2PasswordBearer
 from jose import jwt
 from passlib.context import CryptContext
 from pydantic import ValidationError
+from sqlmodel.ext.asyncio.session import AsyncSession
 from typing_extensions import Annotated
 
 from backend.app.common.exception.errors import AuthorizationError, TokenError
 from backend.app.core.conf import settings
 from backend.app.crud.crud_user import UserDao
+from backend.app.database.db_mysql import async_engine
 from backend.app.models.user import User
 
 pwd_context = CryptContext(schemes=['bcrypt'], deprecated='auto')
@@ -77,7 +79,8 @@ async def get_current_user(token: str = Depends(oauth2_schema)) -> User:
             raise TokenError
     except (jwt.JWTError, ValidationError):
         raise TokenError
-    user = await UserDao.get_user_by_id(user_id)
+    async with AsyncSession(async_engine) as db:
+        user = await UserDao.get_user_by_id(db, user_id)
     if not user:
         raise TokenError
     return user
