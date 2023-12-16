@@ -4,3 +4,4 @@ __pycache__/
 venv/
 backend/app/log/
 .ruff_cache/
+backend/app/alembic/versions/

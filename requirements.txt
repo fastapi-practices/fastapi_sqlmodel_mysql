@@ -1,3 +1,4 @@
+alembic==1.13.0
 asgiref==3.7.2
 asyncmy==0.2.9
 bcrypt==4.0.1

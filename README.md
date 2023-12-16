@@ -14,7 +14,6 @@
 ## TODO
 
 - [ ] Docker
-- [ ] Alembic
 
 ## 使用
 
@@ -44,8 +43,20 @@
    cp .env.example .env
    ```
 
-6. 执行 backend/app/main.py 文件启动服务
-7. 浏览器访问: http://127.0.0.1:8000/api/v1/docs
+6. 数据库迁移 [alembic](https://alembic.sqlalchemy.org/en/latest/tutorial.html)
+
+    ```shell
+    cd backend/app/
+    
+    # 生成迁移文件
+    alembic revision --autogenerate
+    
+    # 执行迁移
+    alembic upgrade head
+    ```
+
+7. 执行 backend/app/main.py 文件启动服务
+8. 浏览器访问: http://127.0.0.1:8000/api/v1/docs
 
 ---
 
@@ -86,4 +97,3 @@
 ## 许可证
 
 本项目根据 MIT 许可证的条款进行许可
-
