@@ -14,6 +14,7 @@
 ## TODO
 
 - [ ] Docker
+- [ ] Alembic
 
 ## 使用
 
@@ -43,20 +44,8 @@
    cp .env.example .env
    ```
 
-6. 数据库迁移 [alembic](https://alembic.sqlalchemy.org/en/latest/tutorial.html)
-
-    ```shell
-    cd backend/app/
-    
-    # 生成迁移文件
-    alembic revision --autogenerate
-    
-    # 执行迁移
-    alembic upgrade head
-    ```
-
-7. 执行 backend/app/main.py 文件启动服务
-8. 浏览器访问: http://127.0.0.1:8000/api/v1/docs
+6. 执行 backend/app/main.py 文件启动服务
+7. 浏览器访问: http://127.0.0.1:8000/api/v1/docs
 
 ---
 
@@ -64,36 +53,22 @@
 
 [TODO](#TODO)
 
-[//]: # (1. 进入 `docker-compose.yml` 文件所在目录，创建环境变量文件 `.env`)
+## 互动
 
-[//]: # ()
-[//]: # (    ```shell)
+有且仅有当前一个频道，请注意辨别真伪
 
-[//]: # (    dcd deploy/docker-compose/)
-
-[//]: # (   )
-[//]: # (    cp .env.server ../../backend/app/.env)
-
-[//]: # (    ```)
-
-[//]: # ()
-[//]: # (2. 执行一键启动命令)
-
-[//]: # ()
-[//]: # (    ```shell)
-
-[//]: # (    docker-compose up -d --build)
-
-[//]: # (    ```)
-
-[//]: # ()
-[//]: # (3. 等待命令自动完成)
-
-[//]: # (4. 浏览器访问：http://127.0.0.1:8000/api/v1/docs)
+<table>
+  <tr>
+    <td><a href="https://t.me/+ZlPhIFkPp7E4NGI1">直链跳转</a></td>
+  </tr>
+  <tr>
+    <td> Telegram </td>
+  </tr>
+</table>
 
 ## 赞助
 
-> 如果此项目能够帮助到你，你可以赞助作者一些咖啡豆表示鼓励 :coffee:
+如果此项目能够帮助到你，你可以赞助作者一些咖啡豆表示鼓励 :coffee:
 
 <table>
   <tr>
